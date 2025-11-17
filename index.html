@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python Basics Placemat — Full Page</title>
+  <title>Combined Page — Shriek + Placemat</title>
 
   <style>
     html, body {
@@ -11,23 +11,52 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
+      font-family: system-ui, sans-serif;
     }
 
-    iframe {
+    /* Top embed (Shrieking Eels) */
+    .top-container {
+      width: 100%;
+      height: 350px;   /* adjustable — crops the footer */
+      overflow: hidden;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .top-container iframe {
+      width: 100%;
+      height: 700px;   /* make iframe taller than container so footer never shows */
+      border: none;
+      transform: translateY(-120px); /* adjusts vertical positioning */
+    }
+
+    /* Bottom full-page placemat */
+    .bottom-iframe {
       position: fixed;
-      top: 0;
+      top: 350px;  /* matches container height above */
       left: 0;
       width: 100vw;
-      height: 100vh;
+      height: calc(100vh - 350px);
       border: none;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Shrieking Eels (Cropped Embed) -->
+  <div class="top-container">
+    <iframe 
+      src="https://www.engineeringwithbricks.com/hackathon-activities/shrieking-eels"
+      scrolling="no"
+    ></iframe>
+  </div>
+
+  <!-- Your Python Basics Placemat -->
   <iframe
+    class="bottom-iframe"
     src="https://rebeccaattia.github.io/python-basics-placemat/"
     allowfullscreen
   ></iframe>
+
 </body>
 </html>
