@@ -3,60 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Combined Page — Shriek + Placemat</title>
+  <title>Shrieking Eels | Engineering with Bricks Clone</title>
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: system-ui, sans-serif;
-    }
-
-    /* Top embed (Shrieking Eels) */
-    .top-container {
-      width: 100%;
-      height: 350px;   /* adjustable — crops the footer */
-      overflow: hidden;
-      border-bottom: 2px solid #ccc;
-    }
-
-    .top-container iframe {
-      width: 100%;
-      height: 700px;   /* make iframe taller than container so footer never shows */
-      border: none;
-      transform: translateY(-120px); /* adjusts vertical positioning */
-    }
-
-    /* Bottom full-page placemat */
-    .bottom-iframe {
-      position: fixed;
-      top: 350px;  /* matches container height above */
-      left: 0;
-      width: 100vw;
-      height: calc(100vh - 350px);
-      border: none;
-    }
-  </style>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="site-shell">
+    <!-- Top navigation mimic -->
+    <header class="top-bar">
+      <div class="top-left">
+        <div>
+          <div class="platform-label">Platform</div>
+          <nav class="platform-links" aria-label="Platform">
+            <a href="#">SPIKE Prime</a>
+            <a href="#">SPIKE Essential</a>
+            <a href="#">EV3</a>
+            <a href="#">WeDo 2.0</a>
+            <a href="#">NXT</a>
+            <a href="#">RCX</a>
+          </nav>
+        </div>
+      </div>
 
-  <!-- Shrieking Eels (Cropped Embed) -->
-  <div class="top-container">
-    <iframe 
-      src="https://www.engineeringwithbricks.com/hackathon-activities/shrieking-eels"
-      scrolling="no"
-    ></iframe>
+      <div class="top-right">
+        <nav class="main-nav" aria-label="Main">
+          <a href="#">About</a>
+          <a href="#">ChatBots</a>
+          <a href="#">Activities</a>
+          <a href="#">Add-Ons</a>
+          <a href="#">Articles</a>
+        </nav>
+        <div class="search-icon" aria-hidden="true">🔍</div>
+      </div>
+    </header>
+
+    <!-- Main content card -->
+    <main class="page-card">
+      <h1>Shrieking Eels</h1>
+
+      <div class="hero-row">
+        <div class="hero-image-wrap">
+          <div class="hero-image">
+            <img
+              src="https://cdn.prod.website-files.com/65b933e10656d98773dd067c/6910fb7a979af17428123f04_The%20Princess%20Bride%20%20%282%29.png"
+              alt="Shrieking Eels illustration"
+            />
+          </div>
+        </div>
+
+        <div class="back-link-wrap">
+          <a class="back-link" href="#">
+            <span class="icon" aria-hidden="true"></span>
+            <span>Back to Hackathon</span>
+          </a>
+        </div>
+      </div>
+
+      <section class="intro-copy">
+        <p>Welcome to the Shrieking Eels team. Your mission is to:</p>
+        <p>
+          Design and program a ship that can sail through a sea full of shrieking eels.
+        </p>
+        <p>
+          When your robot reaches the Cliffs of Insanity, it must trigger the
+          Cliffs of Insanity build.
+        </p>
+      </section>
+
+      <div class="challenge-image">
+        <img
+          src="https://cdn.prod.website-files.com/65a14e52729c40368a865056/65a17e051c41669f12e2f66d_New%20CEEO%20lockup%20Horiz_black.avif"
+          alt="Challenge related image"
+        />
+      </div>
+
+      <div class="cta-block">
+        <a
+          class="cta-button"
+          href="https://rebeccaattia.github.io/python-basics-placemat/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GO TO DRAG &amp; DROP CODE EDITOR
+        </a>
+      </div>
+
+      <footer class="page-footer">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img
+              src="https://cdn.prod.website-files.com/65a14e52729c40368a865056/65a17e051c41669f12e2f66d_New%20CEEO%20lockup%20Horiz_black.avif"
+              alt="Tufts CEEO logo"
+            />
+          </div>
+          <div class="footer-logo">
+            <img
+              src="https://cdn.prod.website-files.com/65a14e52729c40368a865056/66045cf0405183473ab66113_ewb%20logo.avif"
+              alt="Engineering with Bricks logo"
+            />
+          </div>
+        </div>
+
+        <div class="footer-legal">
+          LEGO® and related marks are trademarks of the LEGO Group,
+          which does not sponsor, authorize, or endorse this site.
+          All other names and logos are trademarks of their respective owners.
+        </div>
+      </footer>
+    </main>
   </div>
-
-  <!-- Your Python Basics Placemat -->
-  <iframe
-    class="bottom-iframe"
-    src="https://rebeccaattia.github.io/python-basics-placemat/"
-    allowfullscreen
-  ></iframe>
-
 </body>
 </html>
